@@ -516,7 +516,7 @@ a {
     border-color: #823456; }
   .night #cursor {
     border-color: #823456;
-    transition: all 300ms ease; }
+    transition: border 300ms ease; }
 
 @keyframes ripple {
   0% {
