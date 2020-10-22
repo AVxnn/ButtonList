@@ -15,7 +15,7 @@ $(window).on('scroll', function(r){
 
 $('.remove-cursor').on('click', function(){
     if (i == 1){
-        $('#cursor').css('display', 'block');
+        $('.cursor').css('display', 'block');
         $('body').css('cursor', 'none');
         $('a').css('cursor', 'none');
 
@@ -24,7 +24,7 @@ $('.remove-cursor').on('click', function(){
         i--;
 
     } else  {
-        $('#cursor').css('display', 'none');
+        $('.cursor').css('display', 'none');
         $('body').css('cursor', 'default');
         $('a').css('cursor', 'default');
         $('.remove-cursor').text('Add Cursor');

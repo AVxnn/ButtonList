@@ -25,3 +25,22 @@ $('.dark-theme').on('click', function(){
         i++;
     }
 })
+
+$('.btn').on('mouseenter', function(){
+    $('.cursor').addClass('cursor-active');
+    $('.btn').on('mouseleave', function(){
+        $('.cursor').removeClass('cursor-active');
+    })
+})
+$('.btn-11').on('mouseenter', function(){
+    $('.cursor').addClass('cursor-active');
+    $('.btn-11').on('mouseleave', function(){
+        $('.cursor').removeClass('cursor-active');
+    })
+})
+$('.btn-7').on('mouseenter', function(){
+    $('.cursor').addClass('cursor-active');
+    $('.btn-7').on('mouseleave', function(){
+        $('.cursor').removeClass('cursor-active');
+    })
+})
