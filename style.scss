@@ -3,10 +3,26 @@
 $mainFont: 'Montserrat', sans-serif;
 $primaryColor: #4A90E2;
 $secondColor:#0087AC;
+$borderColor: rgba(black, 0.2);
 
 body{
   background: #8FA6B4;
   font-family: $mainFont;
+  cursor: none;
+  padding: 0;
+  margin: 0;
+  transition: all 300ms ease;
+}
+
+a{
+  cursor: none;
+}
+
+.night{
+  .btn{
+    border-color: #823456;
+    box-shadow: 0 4px 10px 2px rgba(white, 0.1);
+  }
 }
 
 
@@ -19,6 +35,13 @@ body{
     padding: 1em 1em;
   }
 
+}
+
+.btn{
+  padding: 1em 3em;
+  border: 3px solid $primaryColor;
+  transition: all 300ms ease;
+  box-shadow: 0 4px 10px 2px $borderColor;
 }
 
 a{
@@ -36,7 +59,7 @@ a{
   padding: 1em 3em;
   border: 3px solid $primaryColor;
   transition: all 300ms ease;
-  box-shadow: 0 4px 10px 2px rgba(black, 0.2);
+  box-shadow: 0 4px 10px 2px $borderColor;
 
   &:before{
     position: absolute;
@@ -78,7 +101,7 @@ a{
   padding: 1em 3em;
   border: 3px solid $primaryColor;
   transition: all 300ms ease;
-  box-shadow: 0 4px 10px 2px rgba(black, 0.2);
+  box-shadow: 0 4px 10px 2px $borderColor;
 
   &:before{
     position: absolute;
@@ -117,7 +140,7 @@ a{
   padding: 1em 3em;
   border: 3px solid $primaryColor;
   transition: all 300ms ease;
-  box-shadow: 0 4px 10px 2px rgba(black, 0.2);
+  box-shadow: 0 4px 10px 2px $borderColor;
 
   span{
     position: relative;
@@ -166,7 +189,7 @@ a{
   padding: 1em 3em;
   border: 3px solid $primaryColor;
   transition: all 300ms ease;
-  box-shadow: 0 4px 10px 2px rgba(black, 0.2);
+  box-shadow: 0 4px 10px 2px $borderColor;
 
   span{
     position: relative;
@@ -218,7 +241,7 @@ a{
   padding: 1em 3em;
   border: 3px solid $primaryColor;
   transition: all 300ms ease;
-  box-shadow: 0 4px 10px 2px rgba(black, 0.2);
+  box-shadow: 0 4px 10px 2px $borderColor;
 
   &:before{
     content: '';
@@ -285,7 +308,7 @@ a{
   padding: 1em 3em;
   border: 3px solid $primaryColor;
   transition: all 300ms ease;
-  box-shadow: 0 4px 10px 2px rgba(black, 0.2);
+  box-shadow: 0 4px 10px 2px $borderColor;
 
   &:before{
     content: '';
@@ -442,7 +465,7 @@ a{
   padding: 1em 3em;
   border: 3px solid $primaryColor;
   transition: all 300ms ease;
-  box-shadow: 0 4px 10px 2px rgba(black, 0.2);
+  box-shadow: 0 4px 10px 2px $borderColor;
 
   &:before{
     position: absolute;
@@ -495,12 +518,11 @@ a{
   display: inline-block;
   padding: 15px 40px;
   border-radius: 4px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px $borderColor;
   background: #020122;
   color: #ffffff;
   font-weight: 600;
   text-transform: uppercase;
-  cursor: pointer;
   margin: auto;
   text-decoration: none;
 }
@@ -529,7 +551,7 @@ a{
   padding: 1em 3em;
   border: 3px solid $primaryColor;
   transition: all 300ms ease;
-  box-shadow: 0 4px 10px 2px rgba(black, 0.2);
+  box-shadow: 0 4px 10px 2px $borderColor;
 
   &:before{
     position: absolute;
@@ -557,6 +579,121 @@ a{
   }
 }
 
+#cursor{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #407CC3;
+  box-sizing: border-box;
+  transition: 0.00000000000001s;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 11111;
+}
+
+.button-item:hover #cursor{
+  width: 100px;
+  height: 100px;
+  border: 3px dashed #407CC3;
+  transition: 1s;
+}
+
+
+.dark-theme{
+  position: relative;
+  border: 2px solid #407CC3;
+  padding: 10px 20px;
+  border-radius:  1000px;
+  box-shadow: 0 4px 10px 2px $borderColor;
+  transition: all 300ms ease;
+
+  &:hover{
+    box-shadow: none;
+  }
+}
+
+.dark{
+  position: relative;
+  top: 50px;
+  margin-left: 20px;
+
+.remove-cursor{
+  position: relative;
+  border: 2px solid #407CC3;
+  padding: 10px 20px;
+  border-radius:  1000px;
+  box-shadow: 0 4px 10px 2px $borderColor;
+  transition: all 300ms ease;
+
+  &:hover{
+    box-shadow: none;
+  }
+}
+}
+
+
+
+
+
+.night{
+  background-color: #111111;
+  color: #ffffff;
+
+  a{
+    color: #ffffff;
+  }
+
+  span{
+    color: #ffffff;
+
+    &:before{
+      background-color: #823456;
+    }
+
+    &:after{
+      background-color: #823456;
+    }
+  }
+
+  .btn-11,
+  .btn-7{
+    &:before{
+      background-color: #823456;
+    }
+
+    &:after{
+      background-color: #823456;
+    }
+  }
+
+  .btn{
+    border-color: #823456;
+
+    &:before{
+      background-color: #823456;
+    }
+
+    &:after{
+      background-color: #823456;
+    }
+  }
+
+  .btn-7-border{
+    border-color: #823456;
+  }
+
+  #cursor{
+    border-color: #823456;
+    transition: all 300ms ease;
+  }
+}
+
+
+
+
+
 
 @keyframes ripple {
   0%{
@@ -569,6 +706,13 @@ a{
 
 
 @media screen and (max-width: 600px){
+
+};
+
+@media screen and (max-width: 500px) {
+  #cursor{
+    display:  none;
+  }
   .button-parent{
     max-width: 400px;
   }
@@ -576,5 +720,9 @@ a{
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+
+  .dark{
+    margin-top: 40px;
   }
 }
